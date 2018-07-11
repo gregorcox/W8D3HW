@@ -3,6 +3,8 @@ package models;
 import javax.persistence.*;
 import java.util.List;
 
+@Entity
+@Table(name = "courses")
 public class Course {
 
     private int id;
@@ -56,6 +58,7 @@ public class Course {
     public void setLevel(String level) {
         this.level = level;
     }
+
 
     public void setStudents(List<Student> students) {
         this.students = students;

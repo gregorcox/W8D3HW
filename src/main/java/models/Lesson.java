@@ -4,6 +4,8 @@ import javax.persistence.*;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.Fetch;
 
+@Entity
+@Table(name = "lessons")
 public class Lesson {
 
     private int id;
@@ -39,7 +41,8 @@ public class Lesson {
         return classroomNumber;
     }
 
-    @OneToOne(mappedBy = "lesson", fetch = FetchType.LAZY)
+    @ManyToOne
+    @JoinColumn(name = "instructor_id", nullable = false)
     public Instructor getInstructor() {
         return instructor;
     }

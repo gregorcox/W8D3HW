@@ -1,5 +1,9 @@
+import db.DBCourse;
 import db.DBHelper;
+import db.DBStudent;
 import models.*;
+
+import java.util.List;
 
 public class Runner {
 
@@ -31,6 +35,14 @@ public class Runner {
 
         Lesson lesson2 = new Lesson ("Introduction to Anatomy", 30, course2, instructor1);
         DBHelper.save(lesson2);
+
+        List<Lesson> lessons = DBHelper.getAll(Lesson.class);
+        List<Student> students = DBHelper.getAll(Student.class);
+        List<Course> courses = DBHelper.getAll(Course.class);
+
+        List<Lesson> lessonsForCS = DBCourse.getLessonsForCourse(course1);
+
+        List<Lesson> lessonsForJohn = DBStudent.getLessonsForStudent(student2);
 
     }
 }

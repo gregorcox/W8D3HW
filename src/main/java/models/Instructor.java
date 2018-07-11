@@ -3,6 +3,8 @@ package models;
 import javax.persistence.*;
 import java.util.List;
 
+@Entity
+@Table(name = "instructors")
 public class Instructor {
 
     private int id;
