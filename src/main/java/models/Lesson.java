@@ -12,9 +12,11 @@ public class Lesson {
     private Instructor instructor;
     private Course course;
 
-    public Lesson(String title, int classroomNumber){
+    public Lesson(String title, int classroomNumber, Course course, Instructor instructor){
         this.title = title;
         this.classroomNumber = classroomNumber;
+        this.course = course;
+        this.instructor = instructor;
     }
 
     public Lesson(){

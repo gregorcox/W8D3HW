@@ -11,10 +11,12 @@ public class Student {
     private Course course;
     private Mentor mentor;
 
-    private Student(String name, int age, int enrolmentNumber){
+    public Student(String name, int age, int enrolmentNumber, Course course, Mentor mentor){
         this.name = name;
         this.age = age;
         this.enrolmentNumber = enrolmentNumber;
+        this.course = course;
+        this.mentor = mentor;
     }
 
     public void setId(int id) {
